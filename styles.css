@@ -15,7 +15,7 @@
 
   @media only screen and (max-width: 600px) {
     #menu { 
-        height: 80vh!important;
+        height: 100vh!important;
         width: 15vh!important;
     }
 
@@ -24,11 +24,11 @@
     }
 
     .element-interface {
-        margin-left: 12vh!important;
+        margin-left: 15vh!important;
     }
 
     .outline-interface {
-        width: 40vw!important;
+        width: 50vw!important;
         min-width: 160px!important;
         flex-direction: column;
         padding-bottom: 20px;;
@@ -43,7 +43,7 @@
       }
 
     .code {
-      width: 40vw!important;
+      width: 50vw!important;
       min-width: 160px!important;
     }
 
