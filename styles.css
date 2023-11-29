@@ -1,0 +1,489 @@
+
+  body {
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+    display: flex;
+  }
+
+  .settings {
+    font-weight: 600;
+  }
+
+  .size-color-controls label {
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #menu { 
+        height: 80vh!important;
+        width: 15vh!important;
+    }
+
+    .menu-opt {
+        width: 100%!important;
+    }
+
+    .element-interface {
+        margin-left: 12vh!important;
+    }
+
+    .outline-interface {
+        width: 40vw!important;
+        min-width: 160px!important;
+        flex-direction: column;
+        padding-bottom: 20px;;
+    }
+
+    .size-color-controls {
+        border-right: none!important;
+    }
+
+    #resultSearch.large {
+        width: 130px!important;
+      }
+
+    .code {
+      width: 40vw!important;
+      min-width: 160px!important;
+    }
+
+
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 160px;
+    height: 100vh;
+    background:rgba(164, 164, 164, 0.512);
+  }
+
+  .menu-opt {
+    width: 150px;
+    height: 40px;
+    border: 0;
+    background-color: transparent;
+    color: rgb(118, 118, 118);
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .menu-opt:hover {
+    background-color: rgb(225, 225, 225);
+  }
+
+  .menu-opt:active {
+    background-color: white;
+  }
+
+
+
+  .size-color-controls {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    min-width: 90px;
+    height: 100%;
+    border-right: 2px solid rgba(164, 164, 164, 0.512);
+    padding: 0 20px;
+  }
+
+  .outline-interface {
+    border: 2px solid rgba(164, 164, 164, 0.512);
+    border-radius: 5px;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    width: 50vw;
+  }
+
+  #interface {
+    padding: 20px;
+    width: 70vw;
+    max-width: 900px;
+  }
+
+  .element-interface {
+    display: none;
+    margin-left: 150px;
+    width: 90%;
+  }
+
+  .active-interface {
+    display: block;
+  }
+
+  .code {
+    width: 50vw;
+    min-width: 160px!important;
+  }
+
+  select {
+    margin-bottom: 10px;
+  }
+
+  .textarea {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+
+  .code {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    margin-top: 20px;
+    padding: 10px 5px;
+    border-radius: 5px;
+  }
+
+
+  .disabledLabel {
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .copyButton:hover {
+    cursor: copy;
+  }
+
+  /*#resultSelect {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }*/
+
+
+  
+  /* BUTTON */
+
+
+
+  #coloringButton {
+    visibility: hidden;
+    margin: auto;
+  }
+
+  #resultButton {
+    visibility: visible;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    line-height: 10px;
+    border: 0;
+    background-color: transparent;
+  }
+
+  #resultButton.text {
+    color: inherit;
+    border: 0;
+    background-color: transparent;
+
+  }
+
+  #resultButton.outlined {
+    border: 1px solid black;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  #resultButton.filled {
+    color: white;
+    background-color: inherit;
+    border: 0;
+  }
+
+  #resultButton.elevate {
+    background-color: transparent;
+    box-shadow: 2px 2px 5px rgb(165, 165, 165);
+    border: 0;
+    color: inherit;
+  }
+
+  #resultButton.large {
+    height: 60px;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 75px;
+  }
+
+  #resultButton.medium {
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+    border-radius: 60px;
+  }
+
+  #resultButton.small {
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+    border-radius: 50px;
+  }
+
+  #coloringButton.primary {
+    background-color: #2072A1;
+    color: #2072A1;
+  }
+
+  #coloringButton.secondary {
+    background-color: #469DCF;
+    color: #469DCF;
+  }
+
+  #coloringButton.alternative{
+    background-color: #B00C74;
+    color: #B00C74;
+  }
+
+  #resultButton:disabled{
+    cursor: not-allowed;
+  }
+
+  
+  /* SELECT */
+
+
+
+  #coloringSelect {
+    visibility: hidden;
+    margin: auto;
+  }
+
+  #resultSelect {
+    visibility: visible;
+    padding: 0;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    line-height: 10px;
+    border: 0;
+  }
+
+  #resultSelect.standart {
+    color: inherit;
+    border-bottom: 1px solid rgba(118, 118, 118, 0.512);
+    background-color: transparent;
+  }
+
+  #resultSelect.outlined {
+    border: 1px solid rgba(164, 164, 164, 0.512);
+    color: inherit;
+    background-color: transparent;
+  }
+
+  #resultSelect.filled {
+    color: white;
+    background-color: inherit;
+    border-bottom: 2px solid rgba(55, 55, 55, 0.512);
+  }
+
+  #resultSelect.large {
+    height: 60px;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+
+  #resultSelect.medium {
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  #resultSelect.small {
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+
+  #coloringSelect.primary {
+    background-color: #2072a180;
+    color: #2072A1;
+  }
+
+  #coloringSelect.secondary {
+    background-color: #469dcf80;
+    color: #469DCF;
+  }
+
+  #coloringSelect.alternative{
+    background-color: #b00c7480;
+    color: #B00C74;
+  }
+
+  #resultSelect:disabled{
+    cursor: not-allowed;
+  }
+
+
+  /* SEARCH */
+
+  
+  #coloringSearch {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  #resultSearch {
+    display: flex;
+    padding: 8px;
+    border: none;
+    outline: none;
+  }
+
+  .search-icon {
+    display: block;
+    margin: 0 8px;
+    width: 20px;
+    height: 20px;
+    fill: #000; 
+  }
+
+  #resultSearch.standart {
+    order: -1;
+  }
+
+  #resultSearch.lefticon {
+    order: 1;
+  }
+
+  #resultSearch.withhelper {
+    order: 1;
+  }
+
+  #resultSearch.large {
+    height: 60px;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 3px;
+  }
+
+  #resultSearch.medium {
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+    border-radius: 3px;
+  }
+
+  #resultSearch.small {
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+    border-radius: 3px;
+  }
+
+  #coloringSearch.primary .search-icon{
+    stroke: #2072A1;
+  }
+
+  #coloringSearch.secondary .search-icon{
+    stroke: #469DCF;
+  }
+
+  #coloringSearch.alternative .search-icon{
+    stroke: #B00C74;
+  }
+
+  #resultSearch:disabled{
+    cursor: not-allowed;
+  }
+
+
+        /*TEXTAREA*/
+
+
+  #coloringTextarea {
+    visibility: hidden;
+    margin: auto;
+  }
+
+  #resultTextarea {
+    visibility: visible;
+  }
+
+  #resultTextarea::placeholder {
+    visibility: hidden;
+    color:rgba(188, 20, 20, 0.512)
+  }
+
+  #resultTextarea.standart {
+    background-color: transparent;
+    border: 1.5px solid;
+    border-color: inherit;
+  }
+
+  #resultTextarea.fixedandelevated {
+    resize: none;
+    border: 1.5px solid;
+    border-color: inherit;
+    box-shadow: 2px 2px 5px rgb(165, 165, 165);
+  }
+
+  #resultTextarea.withplaceholder {
+    resize: none;
+    border: 1.5px solid;
+    border-color: inherit;
+    color: inherit;
+  }
+
+  #resultTextarea.withplaceholder::placeholder{
+    visibility: visible;
+    color: inherit;
+  }
+
+  #resultTextarea.large {
+    height: 60px;
+    width: 150px;
+    font-size: 16px;
+    border-radius: 3px;
+  }
+
+  #resultTextarea.medium {
+    height: 40px;
+    width: 120px;
+    font-size: 14px;
+    border-radius: 3px;
+  }
+
+  #resultTextarea.small {
+    height: 30px;
+    width: 100px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+
+  #coloringTextarea.primary {
+    border-color: #2072a180;
+    color: #2072A1;
+  }
+
+  #coloringTextarea.secondary {
+    border-color: #469dcf80;
+    color: #469DCF;
+  }
+
+  #coloringTextarea.alternative{
+    border-color: #b00c7480;
+    color: #B00C74;
+  }
+
+  #resultTextarea:disabled{
+    cursor: not-allowed;
+  }

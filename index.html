@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/23d2fcab63.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive documentation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="menu">
+  <button onclick="showInterface('search')" class="menu-opt"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+  <button onclick="showInterface('button')" class="menu-opt"><i class="fa-solid fa-money-check"></i> Button</button>
+  <button onclick="showInterface('select')" class="menu-opt"><i class="fa-solid fa-list-check"></i> Select</button>
+  <button onclick="showInterface('textarea')" class="menu-opt"><i class="fa-solid fa-align-justify"></i> Textarea</button>
+</div>
+
+<div id="interface">
+  <div id="search-interface" class="element-interface">
+    <h2 class="selected">Search</h2>
+    <div class="outline-interface">
+      <div class="size-color-controls">
+        <p class="settings">Настройки</p>
+
+        <label for="search-variant">Вариант:</label>
+        <select id="search-variant">
+          <option value="standart">Standart</option>
+          <option value="lefticon">Left icon</option>
+          <option value="withhelper">With helper</option>
+        </select>
+
+
+        <label for="search-size">Размер:</label>
+        <select id="search-size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+  
+        <label for="search-color">Цвет:</label>
+        <select id="search-color">
+          <option value="primary">Primary</option>
+          <option value="secondary">Secondary</option>
+          <option value="alternative">Alternative</option>
+        </select>
+
+        <label for="searchDisabled" class="disabledLabel">
+          <input type="checkbox" id="searchDisabled" onclick="disabledFunc(0)">
+          Disabled
+        </label>
+      </div>
+  
+      <div id="coloringSearch">
+        <input id="resultSearch" type="search" placeholder="Please enter text">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-1.42 1.42l.27.28v.79l4.25 4.25a1 1 0 0 0 1.42-1.42L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="code">
+      <code id="codeSnippetSearch"></code>
+    </div>
+    <div class="copyButton" onclick="copyCode(0)"><i class="fa-regular fa-copy"></i></div>
+  </div>
+
+  <div id="button-interface" class="element-interface">
+    <h2 class="selected">Button</h2>
+    <div class="outline-interface">
+      <div class="size-color-controls">
+        <p class="settings">Настройки</p>
+
+        <label for="button-variant">Вариант:</label>
+        <select id="button-variant">
+          <option value="text">Text</option>
+          <option value="outlined">Outlined</option>
+          <option value="filled">Filled</option>
+          <option value="elevate">Elevate</option>
+        </select>
+
+
+        <label for="button-size">Размер:</label>
+        <select id="button-size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+  
+        <label for="button-color">Цвет:</label>
+        <select id="button-color">
+          <option value="primary">Primary</option>
+          <option value="secondary">Secondary</option>
+          <option value="alternative">Alternative</option>
+        </select>
+
+        <label for="buttonDisabled" class="disabledLabel">
+          <input type="checkbox" id="buttonDisabled" onclick="disabledFunc(1)">
+          Disabled
+        </label>
+      </div>
+  
+      <div id="coloringButton"><button id="resultButton" onclick="alert()">Button</button></div>
+      
+    </div>
+
+    <div class="code">
+      <code id="codeSnippetButton" class="codeSnip"></code>
+    </div>
+    <div class="copyButton" onclick="copyCode(1)"><i class="fa-regular fa-copy"></i></div>
+  </div>
+
+  <div id="select-interface" class="element-interface">
+    <h2 class="selected">Select</h2>
+    <div class="outline-interface">
+      <div class="size-color-controls">
+        <p class="settings">Настройки</p>
+
+        <label for="select-variant">Вариант:</label>
+        <select id="select-variant">
+          <option value="standart">Standart</option>
+          <option value="outlined">Outlined</option>
+          <option value="filled">Filled</option>
+        </select>
+
+
+        <label for="select-size">Размер:</label>
+        <select id="select-size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+  
+        <label for="select-color">Цвет:</label>
+        <select id="select-color">
+          <option value="primary">Primary</option>
+          <option value="secondary">Secondary</option>
+          <option value="alternative">Alternative</option>
+        </select>
+
+        <label for="selectDisabled" class="disabledLabel">
+          <input type="checkbox" id="selectDisabled" onclick="disabledFunc(2)">
+          Disabled
+        </label>
+      </div>
+  
+      <div id="coloringSelect">
+        <select id="resultSelect">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="code">
+      <code id="codeSnippetSelect"></code>
+    </div>
+    <div class="copyButton" onclick="copyCode(2)"><i class="fa-regular fa-copy"></i></div>
+  </div>
+
+  <div id="textarea-interface" class="element-interface">
+    <h2 class="selected">Textarea</h2>
+    <div class="outline-interface">
+      <div class="size-color-controls">
+        <p class="settings">Настройки</p>
+
+        <label for="textarea-variant">Вариант:</label>
+        <select id="textarea-variant">
+          <option value="standart">Standart</option>
+          <option value="fixedandelevated">Fixed size and elevated</option>
+          <option value="withplaceholder">With placeholder</option>
+        </select>
+
+
+        <label for="textarea-size">Размер:</label>
+        <select id="textarea-size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+  
+        <label for="textarea-color">Цвет:</label>
+        <select id="textarea-color">
+          <option value="primary">Primary</option>
+          <option value="secondary">Secondary</option>
+          <option value="alternative">Alternative</option>
+        </select>
+
+        <label for="textareaDisabled" class="disabledLabel">
+          <input type="checkbox" id="textareaDisabled" onclick="disabledFunc(3)">
+          Disabled
+        </label>
+      </div>
+  
+      <div id="coloringTextarea">
+        <textarea id="resultTextarea" placeholder="Enter text"></textarea>
+      </div>
+    </div>
+
+    <div class="code">
+      <code id="codeSnippetTextarea"></code>
+    </div>
+    <div class="copyButton" onclick="copyCode(3)"><i class="fa-regular fa-copy"></i></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
